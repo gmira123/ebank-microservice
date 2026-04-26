@@ -1,0 +1,32 @@
+package com.dani.customerservice.controller;
+
+import com.dani.customerservice.entities.Customer;
+import com.dani.customerservice.repository.CustomerRepositorey;
+import com.dani.customerservice.service.CustomerService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class CustomerController {
+
+    final private CustomerService customerService;
+
+    public CustomerController(CustomerService customerService) {
+        this.customerService = customerService;
+    }
+
+    @GetMapping("/customers")
+    public List<Customer> getAllCustomers() {
+        return customerService.getAllCustomers();
+    }
+
+    @GetMapping("/customers/{id}")
+    public Customer findCustomerById(@PathVariable Long id) {
+        return customerService.findCustomerById(id);
+    }
+    @PostMapping("/customers")
+    public Customer saveCustomer(@RequestBody Customer customer) {
+        return customerService.saveCustomer(customer);
+    }
+}
