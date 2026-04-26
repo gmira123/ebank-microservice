@@ -4,9 +4,7 @@ import com.dani.ebankservice.entities.BankAccount;
 import com.dani.ebankservice.service.BankAccountService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 public class BankAccountController {

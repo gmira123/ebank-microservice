@@ -1,7 +1,6 @@
 package com.dani.customerservice.controller;
 
 import com.dani.customerservice.entities.Customer;
-import com.dani.customerservice.repository.CustomerRepositorey;
 import com.dani.customerservice.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
